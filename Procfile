@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar build/libs/first-ci-cd-app-with-heroku.jar

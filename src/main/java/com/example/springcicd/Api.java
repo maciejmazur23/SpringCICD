@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Api {
+    public static String CONTENT = "Привет, мир!";
 
     @GetMapping("/hello")
     public String getHelloWorld() {
-        return "Hello world";
+        return CONTENT;
     }
 }
