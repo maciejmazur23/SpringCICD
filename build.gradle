@@ -41,6 +41,8 @@ tasks.named('test') {
 
 bootJar {
     mainClass = 'com.example.springcicd.SpringCicdApplication'
+    archiveBaseName.set('first-ci-cd-app-with-heroku')
+    archiveVersion.set('')
 }
 
 heroku {
