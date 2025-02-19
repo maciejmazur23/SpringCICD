@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.804s</div>
+<div class="counter">1.215s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,9 +66,6 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
-<li>
-<a href="#tab2">Standard error</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -81,8 +78,8 @@
 </tr>
 </thead>
 <tr>
-<td class="success">contextLoads()</td>
-<td class="success">1.804s</td>
+<td class="success">shouldReturnDefaultMessage()</td>
+<td class="success">1.215s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,8 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>13:59:30.880 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.springcicd.SpringCicdApplicationTests]: SpringCicdApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-13:59:31.096 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.springcicd.SpringCicdApplication for test class com.example.springcicd.SpringCicdApplicationTests
+<pre>22:32:17.137 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.springcicd.SpringCicdApplicationTests]: SpringCicdApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:32:17.341 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.springcicd.SpringCicdApplication for test class com.example.springcicd.SpringCicdApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -102,21 +99,50 @@
 
  :: Spring Boot ::                (v3.4.1)
 
-2025-01-18T13:59:31.793+01:00  INFO 22636 --- [SpringCICD] [    Test worker] c.e.s.SpringCicdApplicationTests         : Starting SpringCicdApplicationTests using Java 21.0.4 with PID 22636 (started by lenovo in C:\Users\lenovo\IdeaProjects\SpringCICD)
-2025-01-18T13:59:31.795+01:00  INFO 22636 --- [SpringCICD] [    Test worker] c.e.s.SpringCicdApplicationTests         : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2025-01-18T13:59:36.418+01:00  INFO 22636 --- [SpringCICD] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2025-01-18T13:59:36.629+01:00  INFO 22636 --- [SpringCICD] [    Test worker] c.e.s.SpringCicdApplicationTests         : Started SpringCicdApplicationTests in 5.26 seconds (process running for 7.102)
-</pre>
-</span>
-</div>
-<div id="tab2" class="tab">
-<h2>Standard error</h2>
-<span class="code">
-<pre>Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
-WARNING: A Java agent has been loaded dynamically (C:\Users\lenovo\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.15.11\a38b16385e867f59a641330f0362ebe742788ed8\byte-buddy-agent-1.15.11.jar)
-WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
-WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
-WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2025-02-19T22:32:18.073+01:00  INFO 10220 --- [SpringCICD] [    Test worker] c.e.s.SpringCicdApplicationTests         : Starting SpringCicdApplicationTests using Java 17.0.9 with PID 10220 (started by lenovo in C:\Users\lenovo\IdeaProjects\SpringCICD)
+2025-02-19T22:32:18.076+01:00  INFO 10220 --- [SpringCICD] [    Test worker] c.e.s.SpringCicdApplicationTests         : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-02-19T22:32:20.526+01:00  INFO 10220 --- [SpringCICD] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-02-19T22:32:20.526+01:00  INFO 10220 --- [SpringCICD] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-02-19T22:32:20.535+01:00  INFO 10220 --- [SpringCICD] [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-02-19T22:32:20.546+01:00  INFO 10220 --- [SpringCICD] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 19 ms
+2025-02-19T22:32:20.799+01:00  INFO 10220 --- [SpringCICD] [    Test worker] c.e.s.SpringCicdApplicationTests         : Started SpringCicdApplicationTests in 3.206 seconds (process running for 4.874)
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.springcicd.Api
+           Method = com.example.springcicd.Api#getHelloWorld()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:&quot;text/plain;charset=UTF-8&quot;, Content-Length:&quot;21&quot;]
+     Content type = text/plain;charset=UTF-8
+             Body = Привет, мир!
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
 </pre>
 </span>
 </div>
@@ -128,7 +154,7 @@ WARNING: Dynamic loading of agents will be disallowed by default in a future rel
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 18 sty 2025, 13:59:38</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 19 lut 2025, 22:32:22</p>
 </div>
 </div>
 </body>
